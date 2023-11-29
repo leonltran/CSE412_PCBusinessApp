@@ -1,1 +1,1 @@
-# CSE412_PCBusinessApp
+# CSE412: Custom PC Builder's Order Management
