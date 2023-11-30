@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CSE412_PCBusinessApp
 {
-    public partial class Form1 : Form
+    public partial class frmOrder : Form
     {
-        public Form1()
+        public frmOrder()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace CSE412_PCBusinessApp
 {
-    partial class Form1
+    partial class frmOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrder));
             SuspendLayout();
             // 
-            // Form1
+            // frmOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
-            Text = "Order Management";
+            Name = "frmOrder";
+            Text = "Order Details";
             ResumeLayout(false);
         }
 
