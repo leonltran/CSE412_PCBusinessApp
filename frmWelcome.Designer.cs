@@ -33,7 +33,6 @@
             btnNewCustomer = new Button();
             groupBox1 = new GroupBox();
             btnNewOrder = new Button();
-            btnViewCustomers = new Button();
             grbOrders = new GroupBox();
             groupBox1.SuspendLayout();
             grbOrders.SuspendLayout();
@@ -61,7 +60,6 @@
             // 
             groupBox1.Controls.Add(btnNewCustomer);
             groupBox1.Controls.Add(btnNewOrder);
-            groupBox1.Controls.Add(btnViewCustomers);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(7);
@@ -79,15 +77,6 @@
             btnNewOrder.Text = "Create New Order...\r\n";
             btnNewOrder.UseVisualStyleBackColor = true;
             btnNewOrder.Click += btnNewOrder_Click;
-            // 
-            // btnViewCustomers
-            // 
-            btnViewCustomers.Location = new Point(10, 82);
-            btnViewCustomers.Name = "btnViewCustomers";
-            btnViewCustomers.Size = new Size(304, 23);
-            btnViewCustomers.TabIndex = 2;
-            btnViewCustomers.Text = "View Customer List";
-            btnViewCustomers.UseVisualStyleBackColor = true;
             // 
             // grbOrders
             // 
@@ -122,7 +111,6 @@
         private Button btnNewCustomer;
         private GroupBox groupBox1;
         private Button btnNewOrder;
-        private Button btnViewCustomers;
         private GroupBox grbOrders;
     }
 }
