@@ -13,4 +13,8 @@
     <Content Include="favicon.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.0" />
+  </ItemGroup>
+
 </Project>
