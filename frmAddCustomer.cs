@@ -16,5 +16,10 @@ namespace CSE412_PCBusinessApp
         {
             InitializeComponent();
         }
+
+        private void lblAddress_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

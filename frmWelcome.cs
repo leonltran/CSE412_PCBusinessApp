@@ -21,7 +21,7 @@ namespace CSE412_PCBusinessApp
         // check event listeners under the properties window (F4) by pressing the lightning bolt icon!
         private void Form1_Shown(object sender, EventArgs e)
         {
-            groupBox1.Text = "Modified";
+            grbActions.Text = "Modified";
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)

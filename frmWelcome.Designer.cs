@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
             listView1 = new ListView();
             btnNewCustomer = new Button();
-            groupBox1 = new GroupBox();
+            grbActions = new GroupBox();
             btnNewOrder = new Button();
             grbOrders = new GroupBox();
-            groupBox1.SuspendLayout();
+            lblTitle = new Label();
+            grbActions.SuspendLayout();
             grbOrders.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,21 +57,21 @@
             btnNewCustomer.UseVisualStyleBackColor = true;
             btnNewCustomer.Click += btnAddCustomer_Click;
             // 
-            // groupBox1
+            // grbActions
             // 
-            groupBox1.Controls.Add(btnNewCustomer);
-            groupBox1.Controls.Add(btnNewOrder);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(7);
-            groupBox1.Size = new Size(324, 426);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Actions";
+            grbActions.Controls.Add(btnNewCustomer);
+            grbActions.Controls.Add(btnNewOrder);
+            grbActions.Location = new Point(12, 41);
+            grbActions.Name = "grbActions";
+            grbActions.Padding = new Padding(7);
+            grbActions.Size = new Size(324, 397);
+            grbActions.TabIndex = 2;
+            grbActions.TabStop = false;
+            grbActions.Text = "Actions";
             // 
             // btnNewOrder
             // 
-            btnNewOrder.Location = new Point(10, 366);
+            btnNewOrder.Location = new Point(10, 337);
             btnNewOrder.Name = "btnNewOrder";
             btnNewOrder.Size = new Size(304, 50);
             btnNewOrder.TabIndex = 2;
@@ -88,29 +89,43 @@
             grbOrders.TabStop = false;
             grbOrders.Text = "Orders";
             // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ImageAlign = ContentAlignment.TopLeft;
+            lblTitle.Location = new Point(12, 9);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(279, 25);
+            lblTitle.TabIndex = 4;
+            lblTitle.Text = "Order Management - Welcome";
+            // 
             // frmWelcome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(groupBox1);
+            Controls.Add(lblTitle);
+            Controls.Add(grbActions);
             Controls.Add(grbOrders);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmWelcome";
-            Text = "Order Management - Welcome";
+            Text = "Order Management";
             Shown += Form1_Shown;
-            groupBox1.ResumeLayout(false);
+            grbActions.ResumeLayout(false);
             grbOrders.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private ListView listView1;
         private Button btnNewCustomer;
-        private GroupBox groupBox1;
+        private GroupBox grbActions;
         private Button btnNewOrder;
         private GroupBox grbOrders;
+        private Label lblTitle;
     }
 }
