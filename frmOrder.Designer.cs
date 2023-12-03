@@ -58,6 +58,7 @@
             btnNewComputer.TabIndex = 1;
             btnNewComputer.Text = "Add New Computer...";
             btnNewComputer.UseVisualStyleBackColor = true;
+            btnNewComputer.Click += btnNewComputer_Click;
             // 
             // grbComputers
             // 
@@ -85,6 +86,7 @@
             btnBack.TabIndex = 1;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // grbInfo
             // 
