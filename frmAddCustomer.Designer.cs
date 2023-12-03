@@ -132,6 +132,10 @@
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Add New Customer";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += (sender, e) =>
+            {
+                MessageBox.Show($"{txtName.Text} added as a new customer!");
+            };
             // 
             // frmAddCustomer
             // 
