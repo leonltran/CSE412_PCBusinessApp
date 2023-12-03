@@ -10,23 +10,16 @@ using System.Windows.Forms;
 
 namespace CSE412_PCBusinessApp
 {
-    public partial class frmOrder : Form
+    public partial class frmChangeOrderStatus : Form
     {
-        public frmOrder()
+        public frmChangeOrderStatus()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmChangeOrderStatus cos = new frmChangeOrderStatus();
-            cos.Show();
-        }
-
-        private void btnOrderNewComputer_Click(object sender, EventArgs e)
-        {
-            frmAddComputer ac = new frmAddComputer();
-            ac.Show();
+            this.Close();
         }
     }
 }

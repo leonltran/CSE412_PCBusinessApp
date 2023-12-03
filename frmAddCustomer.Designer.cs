@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddCustomer));
             lblName = new Label();
-            txtName = new TextBox();
-            txtAddress = new TextBox();
             lblAddress = new Label();
-            txtPhone = new TextBox();
             lblPhone = new Label();
-            txtEmail = new TextBox();
             lblEmail = new Label();
-            txtComment = new TextBox();
             lblComment = new Label();
             btnAdd = new Button();
+            txtPhone = new TextBox();
+            txtAddress = new TextBox();
+            txtEmail = new TextBox();
+            txtComment = new TextBox();
+            txtName = new TextBox();
             SuspendLayout();
             // 
             // lblName
@@ -51,20 +51,6 @@
             lblName.TabIndex = 0;
             lblName.Text = "Name";
             // 
-            // txtName
-            // 
-            txtName.Location = new Point(12, 27);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(376, 23);
-            txtName.TabIndex = 0;
-            // 
-            // txtAddress
-            // 
-            txtAddress.Location = new Point(12, 115);
-            txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(376, 23);
-            txtAddress.TabIndex = 2;
-            // 
             // lblAddress
             // 
             lblAddress.AutoSize = true;
@@ -73,14 +59,7 @@
             lblAddress.Size = new Size(49, 15);
             lblAddress.TabIndex = 2;
             lblAddress.Text = "Address";
-            lblAddress.Click += lblAddress_Click;
-            // 
-            // txtPhone
-            // 
-            txtPhone.Location = new Point(12, 159);
-            txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(376, 23);
-            txtPhone.TabIndex = 3;
+            lblAddress.Click += this.lblAddress_Click;
             // 
             // lblPhone
             // 
@@ -91,13 +70,6 @@
             lblPhone.TabIndex = 4;
             lblPhone.Text = "Phone Number";
             // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(12, 71);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(376, 23);
-            txtEmail.TabIndex = 1;
-            // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
@@ -106,14 +78,6 @@
             lblEmail.Size = new Size(81, 15);
             lblEmail.TabIndex = 6;
             lblEmail.Text = "Email Address";
-            // 
-            // txtComment
-            // 
-            txtComment.Location = new Point(12, 203);
-            txtComment.Multiline = true;
-            txtComment.Name = "txtComment";
-            txtComment.Size = new Size(376, 187);
-            txtComment.TabIndex = 4;
             // 
             // lblComment
             // 
@@ -132,6 +96,42 @@
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Add New Customer";
             btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // txtPhone
+            // 
+            txtPhone.Location = new Point(12, 159);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(376, 23);
+            txtPhone.TabIndex = 3;
+            // 
+            // txtAddress
+            // 
+            txtAddress.Location = new Point(12, 115);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(376, 23);
+            txtAddress.TabIndex = 2;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(12, 71);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(376, 23);
+            txtEmail.TabIndex = 1;
+            // 
+            // txtComment
+            // 
+            txtComment.Location = new Point(12, 203);
+            txtComment.Multiline = true;
+            txtComment.Name = "txtComment";
+            txtComment.Size = new Size(376, 187);
+            txtComment.TabIndex = 4;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(12, 27);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(376, 23);
+            txtName.TabIndex = 0;
             // 
             // frmAddCustomer
             // 
@@ -159,15 +159,15 @@
         #endregion
 
         private Label lblName;
-        private TextBox txtName;
-        private TextBox txtAddress;
         private Label lblAddress;
-        private TextBox txtPhone;
         private Label lblPhone;
-        private TextBox txtEmail;
         private Label lblEmail;
-        private TextBox txtComment;
         private Label lblComment;
         private Button btnAdd;
+        private TextBox txtPhone;
+        private TextBox txtAddress;
+        private TextBox txtEmail;
+        private TextBox txtComment;
+        private TextBox txtName;
     }
 }
