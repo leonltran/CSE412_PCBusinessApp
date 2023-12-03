@@ -29,54 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
-            lsvOrders = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
+            listView1 = new ListView();
             btnNewCustomer = new Button();
             grbActions = new GroupBox();
-            btnPassword = new Button();
             btnNewOrder = new Button();
             grbOrders = new GroupBox();
-            btnDelete = new Button();
-            btnEdit = new Button();
             lblTitle = new Label();
             grbActions.SuspendLayout();
             grbOrders.SuspendLayout();
             SuspendLayout();
             // 
-            // lsvOrders
+            // listView1
             // 
-            lsvOrders.Activation = ItemActivation.OneClick;
-            lsvOrders.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            lsvOrders.FullRowSelect = true;
-            lsvOrders.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            lsvOrders.Location = new Point(6, 22);
-            lsvOrders.Name = "lsvOrders";
-            lsvOrders.Size = new Size(434, 369);
-            lsvOrders.TabIndex = 0;
-            lsvOrders.UseCompatibleStateImageBehavior = false;
-            lsvOrders.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "OrderID";
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Customer";
-            columnHeader2.Width = 180;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Status";
-            columnHeader3.Width = 90;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Date";
-            columnHeader4.Width = 90;
+            listView1.Location = new Point(6, 22);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(434, 398);
+            listView1.TabIndex = 0;
+            listView1.UseCompatibleStateImageBehavior = false;
             // 
             // btnNewCustomer
             // 
@@ -90,7 +59,6 @@
             // 
             // grbActions
             // 
-            grbActions.Controls.Add(btnPassword);
             grbActions.Controls.Add(btnNewCustomer);
             grbActions.Controls.Add(btnNewOrder);
             grbActions.Location = new Point(12, 41);
@@ -101,19 +69,9 @@
             grbActions.TabStop = false;
             grbActions.Text = "Actions";
             // 
-            // btnPassword
-            // 
-            btnPassword.Location = new Point(10, 364);
-            btnPassword.Name = "btnPassword";
-            btnPassword.Size = new Size(304, 23);
-            btnPassword.TabIndex = 3;
-            btnPassword.Text = "Configure Database Password";
-            btnPassword.UseVisualStyleBackColor = true;
-            btnPassword.Click += btnPassword_Click;
-            // 
             // btnNewOrder
             // 
-            btnNewOrder.Location = new Point(10, 82);
+            btnNewOrder.Location = new Point(10, 337);
             btnNewOrder.Name = "btnNewOrder";
             btnNewOrder.Size = new Size(304, 50);
             btnNewOrder.TabIndex = 2;
@@ -123,35 +81,13 @@
             // 
             // grbOrders
             // 
-            grbOrders.Controls.Add(btnDelete);
-            grbOrders.Controls.Add(btnEdit);
-            grbOrders.Controls.Add(lsvOrders);
+            grbOrders.Controls.Add(listView1);
             grbOrders.Location = new Point(342, 12);
             grbOrders.Name = "grbOrders";
             grbOrders.Size = new Size(446, 426);
             grbOrders.TabIndex = 3;
             grbOrders.TabStop = false;
             grbOrders.Text = "Orders";
-            // 
-            // btnDelete
-            // 
-            btnDelete.ForeColor = Color.Red;
-            btnDelete.Location = new Point(6, 397);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(75, 23);
-            btnDelete.TabIndex = 2;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            btnEdit.Location = new Point(365, 397);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(75, 23);
-            btnEdit.TabIndex = 1;
-            btnEdit.Text = "Edit";
-            btnEdit.UseVisualStyleBackColor = true;
-            btnEdit.Click += btnEdit_Click;
             // 
             // lblTitle
             // 
@@ -176,7 +112,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmWelcome";
             Text = "Order Management";
-            Load += frmWelcome_Load;
             Shown += Form1_Shown;
             grbActions.ResumeLayout(false);
             grbOrders.ResumeLayout(false);
@@ -186,18 +121,11 @@
 
         #endregion
 
-        private ListView lsvOrders;
+        private ListView listView1;
         private Button btnNewCustomer;
         private GroupBox grbActions;
         private Button btnNewOrder;
         private GroupBox grbOrders;
         private Label lblTitle;
-        private Button btnEdit;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader3;
-        private Button btnPassword;
-        private Button btnDelete;
     }
 }
