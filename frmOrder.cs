@@ -27,6 +27,7 @@ namespace CSE412_PCBusinessApp
         {
             frmAddComputer ac = new frmAddComputer();
             ac.Show();
+        }
         private void btnNewComputer_Click(object sender, EventArgs e)
         {
             frmComputer c = new frmComputer();
