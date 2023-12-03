@@ -27,6 +27,20 @@ namespace CSE412_PCBusinessApp
         {
             frmAddComputer ac = new frmAddComputer();
             ac.Show();
+        private void btnNewComputer_Click(object sender, EventArgs e)
+        {
+            frmComputer c = new frmComputer();
+            c.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if(frmWelcome.ActiveForm != null)
+            {
+                Form previousForm = frmWelcome.formStack.Pop();
+                previousForm.Show();
+                this.Close();
+            }
         }
     }
 }

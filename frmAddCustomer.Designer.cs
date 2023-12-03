@@ -96,6 +96,7 @@
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Add New Customer";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtPhone
             // 

@@ -19,7 +19,13 @@ namespace CSE412_PCBusinessApp
 
         private void lblAddress_Click(object sender, EventArgs e)
         {
+            
+            
+        }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"{txtName.Text} added as a new customer!");
         }
     }
 }

@@ -12,6 +12,7 @@ namespace CSE412_PCBusinessApp
 {
     public partial class frmWelcome : Form
     {
+        public static Stack<Form> formStack = new Stack<Form>();
         public frmWelcome()
         {
             InitializeComponent();
@@ -32,7 +33,10 @@ namespace CSE412_PCBusinessApp
 
         private void btnNewOrder_Click(object sender, EventArgs e)
         {
-
+            frmOrder o = new frmOrder();
+            formStack.Push(this);
+            o.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
