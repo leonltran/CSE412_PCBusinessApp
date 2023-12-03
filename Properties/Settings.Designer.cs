@@ -25,13 +25,13 @@ namespace CSE412_PCBusinessApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int currCustomerID {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string password {
             get {
-                return ((int)(this["currCustomerID"]));
+                return ((string)(this["password"]));
             }
             set {
-                this["currCustomerID"] = value;
+                this["password"] = value;
             }
         }
     }
