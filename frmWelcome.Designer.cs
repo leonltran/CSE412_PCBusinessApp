@@ -59,7 +59,6 @@
             // 
             // lsvOrders
             // 
-            lsvOrders.Activation = ItemActivation.OneClick;
             lsvOrders.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
             lsvOrders.FullRowSelect = true;
             lsvOrders.HeaderStyle = ColumnHeaderStyle.Nonclickable;

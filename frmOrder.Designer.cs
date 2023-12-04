@@ -30,10 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrder));
             grbActions = new GroupBox();
+            btnCustomerDetails = new Button();
+            btnComputerDetails = new Button();
             btnChangeStatus = new Button();
             btnOrderNewComputer = new Button();
             grbComputers = new GroupBox();
             lsvComputers = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
             grbInfo = new GroupBox();
             lblComment = new Label();
             lblStatus = new Label();
@@ -42,9 +47,6 @@
             lblPrice = new Label();
             lblCustomer = new Label();
             lblOrderID = new Label();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
             grbActions.SuspendLayout();
             grbComputers.SuspendLayout();
             grbInfo.SuspendLayout();
@@ -52,6 +54,8 @@
             // 
             // grbActions
             // 
+            grbActions.Controls.Add(btnCustomerDetails);
+            grbActions.Controls.Add(btnComputerDetails);
             grbActions.Controls.Add(btnChangeStatus);
             grbActions.Controls.Add(btnOrderNewComputer);
             grbActions.Location = new Point(12, 12);
@@ -62,11 +66,31 @@
             grbActions.TabStop = false;
             grbActions.Text = "Actions";
             // 
+            // btnCustomerDetails
+            // 
+            btnCustomerDetails.Location = new Point(214, 82);
+            btnCustomerDetails.Name = "btnCustomerDetails";
+            btnCustomerDetails.Size = new Size(100, 50);
+            btnCustomerDetails.TabIndex = 4;
+            btnCustomerDetails.Text = "View Customer Details...";
+            btnCustomerDetails.UseVisualStyleBackColor = true;
+            btnCustomerDetails.Click += btnCustomerDetails_Click;
+            // 
+            // btnComputerDetails
+            // 
+            btnComputerDetails.Location = new Point(214, 26);
+            btnComputerDetails.Name = "btnComputerDetails";
+            btnComputerDetails.Size = new Size(100, 50);
+            btnComputerDetails.TabIndex = 3;
+            btnComputerDetails.Text = "View Computer Details...";
+            btnComputerDetails.UseVisualStyleBackColor = true;
+            btnComputerDetails.Click += btnComputerDetails_Click;
+            // 
             // btnChangeStatus
             // 
             btnChangeStatus.Location = new Point(10, 82);
             btnChangeStatus.Name = "btnChangeStatus";
-            btnChangeStatus.Size = new Size(304, 50);
+            btnChangeStatus.Size = new Size(198, 50);
             btnChangeStatus.TabIndex = 2;
             btnChangeStatus.Text = "Change Order Status...";
             btnChangeStatus.UseVisualStyleBackColor = true;
@@ -76,7 +100,7 @@
             // 
             btnOrderNewComputer.Location = new Point(10, 26);
             btnOrderNewComputer.Name = "btnOrderNewComputer";
-            btnOrderNewComputer.Size = new Size(304, 50);
+            btnOrderNewComputer.Size = new Size(198, 50);
             btnOrderNewComputer.TabIndex = 1;
             btnOrderNewComputer.Text = "Add New Computer...";
             btnOrderNewComputer.UseVisualStyleBackColor = true;
@@ -95,12 +119,28 @@
             // lsvComputers
             // 
             lsvComputers.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            lsvComputers.FullRowSelect = true;
             lsvComputers.Location = new Point(6, 22);
             lsvComputers.Name = "lsvComputers";
             lsvComputers.Size = new Size(434, 398);
             lsvComputers.TabIndex = 0;
             lsvComputers.UseCompatibleStateImageBehavior = false;
             lsvComputers.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Computer ID";
+            columnHeader1.Width = 90;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Type";
+            columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Weight";
+            columnHeader3.Width = 90;
             // 
             // grbInfo
             // 
@@ -190,21 +230,6 @@
             lblOrderID.TabIndex = 0;
             lblOrderID.Text = "Order ID:";
             // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Computer ID";
-            columnHeader1.Width = 90;
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Type";
-            columnHeader2.Width = 90;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Weight";
-            columnHeader3.Width = 90;
-            // 
             // frmOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -242,5 +267,7 @@
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
+        private Button btnComputerDetails;
+        private Button btnCustomerDetails;
     }
 }

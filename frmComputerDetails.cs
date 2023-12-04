@@ -15,14 +15,27 @@ namespace CSE412_PCBusinessApp
 {
     public partial class frmComputerDetails : Form
     {
+        private string comp_id = "";
         public frmComputerDetails()
         {
             InitializeComponent();
         }
 
+        public frmComputerDetails(string comp_id)
+        {
+            InitializeComponent();
+            this.comp_id = comp_id;
+            cbCompID.Text = this.comp_id;
+
+        }
+
         private void frmComputerDetails_Load(object sender, EventArgs e)
         {
-            loadComputerList();
+            if (comp_id == "")
+            {
+                loadComputerList();
+            }
+            else searchCompList(comp_id);
         }
 
         private void cbCompID_KeyPress(object sender, KeyPressEventArgs e)

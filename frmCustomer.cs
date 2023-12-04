@@ -14,9 +14,17 @@ namespace CSE412_PCBusinessApp
 {
     public partial class frmCustomer : Form
     {
+        private string cName = "";
         public frmCustomer()
         {
             InitializeComponent();
+        }
+
+        public frmCustomer(string cName)
+        {
+            InitializeComponent();
+            this.cName = cName;
+            comboBox1.Text = this.cName;
         }
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -41,7 +49,11 @@ namespace CSE412_PCBusinessApp
 
         private void frmCustomer_Load(object sender, EventArgs e)
         {
-            loadCustomerList();
+            if (cName == "")
+            {
+                loadCustomerList();
+            }
+            else searchCustomerList(cName);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

@@ -54,6 +54,7 @@
             // lParts
             // 
             lParts.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
+            lParts.FullRowSelect = true;
             lParts.Location = new Point(6, 22);
             lParts.Name = "lParts";
             lParts.Size = new Size(764, 375);

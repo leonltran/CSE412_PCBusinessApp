@@ -39,6 +39,7 @@
             // lComputers
             // 
             lComputers.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            lComputers.FullRowSelect = true;
             lComputers.Location = new Point(180, 12);
             lComputers.Name = "lComputers";
             lComputers.Size = new Size(405, 426);
