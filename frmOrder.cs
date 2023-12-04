@@ -19,6 +19,11 @@ namespace CSE412_PCBusinessApp
         {
             InitializeComponent();
         }
+        public frmOrder(string oid)
+        {
+            InitializeComponent();
+            this.oid = oid;
+        }
         private void frmOrder_Load(object sender, EventArgs e)
         {
             if (oid != "")

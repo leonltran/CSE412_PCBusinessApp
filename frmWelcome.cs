@@ -24,7 +24,11 @@ namespace CSE412_PCBusinessApp
         }
         private void frmWelcome_Load(object sender, EventArgs e)
         {
-            updateOrdersList();
+            try
+            {
+                updateOrdersList();
+            }
+            catch { }
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
@@ -52,8 +56,7 @@ namespace CSE412_PCBusinessApp
                 string orderID = lsvOrders.SelectedItems[0].Text; // get the order ID
 
                 // open frmOrder
-                frmOrder o = new frmOrder();
-                o.oid = orderID;
+                frmOrder o = new frmOrder(orderID);
                 o.Show();
             }
             catch
@@ -99,8 +102,8 @@ namespace CSE412_PCBusinessApp
             Settings.Default.password = newPass;
             try
             {
-                updateOrdersList();
                 Settings.Default.Save();
+                updateOrdersList();
             }
             catch
             {
