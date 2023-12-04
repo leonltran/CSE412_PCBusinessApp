@@ -29,13 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComputer));
+            lComputers = new ListView();
             SuspendLayout();
+            // 
+            // lComputers
+            // 
+            lComputers.Location = new Point(12, 12);
+            lComputers.Name = "lComputers";
+            lComputers.Size = new Size(776, 426);
+            lComputers.TabIndex = 0;
+            lComputers.UseCompatibleStateImageBehavior = false;
             // 
             // frmComputer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lComputers);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmComputer";
             Text = "PC Builder";
@@ -43,5 +53,7 @@
         }
 
         #endregion
+
+        private ListView lComputers;
     }
 }
