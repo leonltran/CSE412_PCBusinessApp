@@ -47,9 +47,9 @@
             lblName.AutoSize = true;
             lblName.Location = new Point(12, 9);
             lblName.Name = "lblName";
-            lblName.Size = new Size(39, 15);
+            lblName.Size = new Size(97, 15);
             lblName.TabIndex = 0;
-            lblName.Text = "Name";
+            lblName.Text = "Name (Required)";
             // 
             // lblAddress
             // 
@@ -59,7 +59,7 @@
             lblAddress.Size = new Size(49, 15);
             lblAddress.TabIndex = 2;
             lblAddress.Text = "Address";
-            lblAddress.Click += this.lblAddress_Click;
+            lblAddress.Click += lblAddress_Click;
             // 
             // lblPhone
             // 
@@ -75,9 +75,9 @@
             lblEmail.AutoSize = true;
             lblEmail.Location = new Point(12, 53);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(81, 15);
+            lblEmail.Size = new Size(139, 15);
             lblEmail.TabIndex = 6;
-            lblEmail.Text = "Email Address";
+            lblEmail.Text = "Email Address (Required)";
             // 
             // lblComment
             // 
