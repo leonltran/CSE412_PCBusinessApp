@@ -33,7 +33,15 @@
             label1 = new Label();
             comboBox1 = new ComboBox();
             groupBox2 = new GroupBox();
+            label2 = new Label();
+            listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            columnHeader5 = new ColumnHeader();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -63,15 +71,62 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(245, 23);
             comboBox1.TabIndex = 1;
+            comboBox1.KeyPress += comboBox1_KeyPress;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(listView1);
             groupBox2.Location = new Point(12, 66);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(776, 372);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Customer Information";
+            // 
+            // label2
+            // 
+            label2.Location = new Point(6, 256);
+            label2.Name = "label2";
+            label2.Size = new Size(764, 100);
+            label2.TabIndex = 1;
+            label2.Text = "Comment:";
+            // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
+            listView1.FullRowSelect = true;
+            listView1.Location = new Point(6, 22);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(764, 204);
+            listView1.TabIndex = 0;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Cust. ID";
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Name";
+            columnHeader2.Width = 110;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Email";
+            columnHeader3.Width = 200;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Address";
+            columnHeader4.Width = 300;
+            // 
+            // columnHeader5
+            // 
+            columnHeader5.Text = "Phone #";
+            columnHeader5.Width = 70;
             // 
             // frmCustomer
             // 
@@ -83,8 +138,10 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmCustomer";
             Text = "Customer Details";
+            Load += frmCustomer_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -94,5 +151,12 @@
         private Label label1;
         private ComboBox comboBox1;
         private GroupBox groupBox2;
+        private ListView listView1;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader5;
+        private Label label2;
     }
 }
