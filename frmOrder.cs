@@ -74,8 +74,6 @@ namespace CSE412_PCBusinessApp
         }
         private void btnCustomerDetails_Click(object sender, EventArgs e)
         {
-            string compID = lsvComputers.SelectedItems[0].Text; // get the computer ID
-
             // open frmComputer
             frmCustomer c = new frmCustomer(cName);
             c.Show();
