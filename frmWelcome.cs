@@ -113,8 +113,9 @@ namespace CSE412_PCBusinessApp
 
         /* This method handles the population of the Orders list upon application load.
          */
-        private void updateOrdersList()
+        public void updateOrdersList() //public so other forms can access (idc if this isn't good practice)
         {
+            lsvOrders.Items.Clear(); // clear list
             if (Settings.Default.password != "")
             {
                 string pass = Settings.Default.password;
