@@ -32,9 +32,11 @@ namespace CSE412_PCBusinessApp
                     ($"SELECT * FROM orders WHERE o_oid = {oid}");
                 NpgsqlDataReader dr = command.ExecuteReader();
 
+                string cid = "";
                 while (dr.Read())
                 {
                     lblOrderID.Text = $"Order ID: {dr[0]}";
+                    cid = dr.GetInt32(1).ToString();
                     lblPrice.Text = $"Total Price: ${dr[2]}";
                     lblDate.Text = $"Order Date: {dr.GetDateTime(3).Date.ToShortDateString()}";
                     lblType.Text = $"Order Type: {dr[4]}";
@@ -44,7 +46,7 @@ namespace CSE412_PCBusinessApp
 
                 // SELECT command for customer name
                 command = dataSource.CreateCommand
-                    ($"SELECT cu_name FROM orders, customer WHERE o_cid = cu_cid");
+                    ($"SELECT cu_name FROM orders, customer WHERE cu_cid = {cid}");
                 dr = command.ExecuteReader();
 
                 while (dr.Read())
