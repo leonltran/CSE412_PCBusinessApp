@@ -39,7 +39,6 @@
             btnViewCustomer = new Button();
             grbOrders = new GroupBox();
             btnEdit = new Button();
-            lblTitle = new Label();
             btnDelete = new Button();
             grbOrder = new GroupBox();
             btnEditOrder = new Button();
@@ -104,9 +103,8 @@
             // 
             grbCustomer.Controls.Add(btnViewCustomer);
             grbCustomer.Controls.Add(btnNewCustomer);
-            grbCustomer.Location = new Point(12, 36);
+            grbCustomer.Location = new Point(12, 12);
             grbCustomer.Name = "grbCustomer";
-            grbCustomer.Padding = new Padding(7);
             grbCustomer.Size = new Size(324, 91);
             grbCustomer.TabIndex = 2;
             grbCustomer.TabStop = false;
@@ -139,22 +137,11 @@
             btnEdit.Size = new Size(75, 23);
             btnEdit.TabIndex = 0;
             // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
-            lblTitle.ImageAlign = ContentAlignment.TopLeft;
-            lblTitle.Location = new Point(2, -1);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(252, 20);
-            lblTitle.TabIndex = 4;
-            lblTitle.Text = "Order Management - Welcome";
-            // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(12, 408);
+            btnDelete.Location = new Point(12, 412);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(150, 30);
+            btnDelete.Size = new Size(150, 26);
             btnDelete.TabIndex = 17;
             btnDelete.Text = "Delete Data Item...";
             btnDelete.UseVisualStyleBackColor = true;
@@ -164,10 +151,9 @@
             // 
             grbOrder.Controls.Add(btnEditOrder);
             grbOrder.Controls.Add(btnNewOrder);
-            grbOrder.Location = new Point(12, 126);
+            grbOrder.Location = new Point(12, 109);
             grbOrder.Name = "grbOrder";
-            grbOrder.Padding = new Padding(7);
-            grbOrder.Size = new Size(324, 91);
+            grbOrder.Size = new Size(324, 93);
             grbOrder.TabIndex = 4;
             grbOrder.TabStop = false;
             grbOrder.Text = "Orders";
@@ -196,9 +182,8 @@
             // 
             grbComputer.Controls.Add(btnComputerDetails);
             grbComputer.Controls.Add(btnViewComputers);
-            grbComputer.Location = new Point(12, 215);
+            grbComputer.Location = new Point(12, 208);
             grbComputer.Name = "grbComputer";
-            grbComputer.Padding = new Padding(7);
             grbComputer.Size = new Size(324, 91);
             grbComputer.TabIndex = 15;
             grbComputer.TabStop = false;
@@ -230,7 +215,6 @@
             grbParts.Controls.Add(btnViewParts);
             grbParts.Location = new Point(12, 305);
             grbParts.Name = "grbParts";
-            grbParts.Padding = new Padding(7);
             grbParts.Size = new Size(324, 91);
             grbParts.TabIndex = 17;
             grbParts.TabStop = false;
@@ -258,9 +242,9 @@
             // 
             // btnPassword
             // 
-            btnPassword.Location = new Point(186, 408);
+            btnPassword.Location = new Point(186, 412);
             btnPassword.Name = "btnPassword";
-            btnPassword.Size = new Size(150, 30);
+            btnPassword.Size = new Size(150, 26);
             btnPassword.TabIndex = 18;
             btnPassword.Text = "Config DB Password";
             btnPassword.UseVisualStyleBackColor = true;
@@ -276,13 +260,12 @@
             Controls.Add(grbComputer);
             Controls.Add(grbOrder);
             Controls.Add(btnDelete);
-            Controls.Add(lblTitle);
             Controls.Add(grbCustomer);
             Controls.Add(grbOrders);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmWelcome";
-            Text = "Order Management";
+            Text = "Order Management - Welcome";
             Load += frmWelcome_Load;
             grbCustomer.ResumeLayout(false);
             grbOrders.ResumeLayout(false);
@@ -290,7 +273,6 @@
             grbComputer.ResumeLayout(false);
             grbParts.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -299,7 +281,6 @@
         private Button btnNewCustomer;
         private GroupBox grbCustomer;
         private GroupBox grbOrders;
-        private Label lblTitle;
         private Button btnViewCustomer;
         private Button btnDelete;
         private GroupBox grbOrder;

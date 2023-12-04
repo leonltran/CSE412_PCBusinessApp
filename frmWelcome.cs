@@ -108,6 +108,8 @@ namespace CSE412_PCBusinessApp
             }
         }
 
+        /* This method handles the population of the Orders list upon application load.
+         */
         private void updateOrdersList()
         {
             if (Settings.Default.password != "")

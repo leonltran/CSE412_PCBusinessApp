@@ -42,6 +42,9 @@
             lblPrice = new Label();
             lblCustomer = new Label();
             lblOrderID = new Label();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
             grbActions.SuspendLayout();
             grbComputers.SuspendLayout();
             grbInfo.SuspendLayout();
@@ -91,11 +94,13 @@
             // 
             // lsvComputers
             // 
+            lsvComputers.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
             lsvComputers.Location = new Point(6, 22);
             lsvComputers.Name = "lsvComputers";
             lsvComputers.Size = new Size(434, 398);
             lsvComputers.TabIndex = 0;
             lsvComputers.UseCompatibleStateImageBehavior = false;
+            lsvComputers.View = View.Details;
             // 
             // grbInfo
             // 
@@ -185,6 +190,21 @@
             lblOrderID.TabIndex = 0;
             lblOrderID.Text = "Order ID:";
             // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Computer ID";
+            columnHeader1.Width = 90;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Type";
+            columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Weight";
+            columnHeader3.Width = 90;
+            // 
             // frmOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -219,5 +239,8 @@
         private Label lblType;
         private Label lblDate;
         private Label lblPrice;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
     }
 }

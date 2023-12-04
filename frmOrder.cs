@@ -53,6 +53,18 @@ namespace CSE412_PCBusinessApp
                 {
                     lblCustomer.Text = $"Customer: {dr[0]}";
                 }
+
+                // SELECT command for order's PCs
+                command = dataSource.CreateCommand
+                    ($"SELECT computer.* FROM orders, computer WHERE o_oid = {oid} AND c_oid = {oid}");
+                dr = command.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    string[] row = { dr[1].ToString(), dr[2].ToString(), dr[3].ToString()};
+                    var listViewItem = new ListViewItem(row);
+                    lsvComputers.Items.Add(listViewItem);
+                }
             }
         }
 
