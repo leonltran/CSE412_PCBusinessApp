@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDelete));
             gbItemInfo = new GroupBox();
             label1 = new Label();
             cbItemUID = new ComboBox();
@@ -113,8 +114,9 @@
             Controls.Add(btnDeleteItem);
             Controls.Add(gbResult);
             Controls.Add(gbItemInfo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDelete";
-            Text = "frmDelete";
+            Text = "Delete Item";
             gbItemInfo.ResumeLayout(false);
             gbItemInfo.PerformLayout();
             ResumeLayout(false);

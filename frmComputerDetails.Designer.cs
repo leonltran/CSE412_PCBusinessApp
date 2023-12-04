@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComputerDetails));
             gbSearch = new GroupBox();
             lblCompId = new Label();
             cbCompID = new ComboBox();
@@ -191,8 +192,9 @@
             ClientSize = new Size(800, 450);
             Controls.Add(gbSearch);
             Controls.Add(gbCompInfo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmComputerDetails";
-            Text = "frmComputerDetails";
+            Text = "Computer Details";
             Load += frmComputerDetails_Load;
             gbSearch.ResumeLayout(false);
             gbSearch.PerformLayout();

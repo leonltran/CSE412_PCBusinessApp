@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddOrder));
             btnAdd = new Button();
             lblPrice = new Label();
             lblType = new Label();
@@ -268,8 +269,9 @@
             Controls.Add(lblType);
             Controls.Add(lblDate);
             Controls.Add(lblCustomer);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAddOrder";
-            Text = "frmAddOrder";
+            Text = "Add New Order";
             gbComputer.ResumeLayout(false);
             gbComputer.PerformLayout();
             ResumeLayout(false);

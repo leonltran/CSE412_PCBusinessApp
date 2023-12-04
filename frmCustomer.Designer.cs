@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomer));
             groupBox1 = new GroupBox();
-            comboBox1 = new ComboBox();
             label1 = new Label();
+            comboBox1 = new ComboBox();
             groupBox2 = new GroupBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -46,14 +47,6 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Customer Search";
             // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(106, 19);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(245, 23);
-            comboBox1.TabIndex = 1;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -62,6 +55,14 @@
             label1.Size = new Size(94, 15);
             label1.TabIndex = 2;
             label1.Text = "Customer Name";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(106, 19);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(245, 23);
+            comboBox1.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -79,8 +80,9 @@
             ClientSize = new Size(800, 450);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmCustomer";
-            Text = "frmCustomer";
+            Text = "Customer Details";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

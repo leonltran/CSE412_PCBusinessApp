@@ -74,7 +74,7 @@
             Controls.Add(lComputers);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmComputer";
-            Text = "PC Builder";
+            Text = "Computers";
             Load += frmComputer_Load;
             ResumeLayout(false);
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPart));
             groupBox1 = new GroupBox();
             lParts = new ListView();
             columnHeader1 = new ColumnHeader();
@@ -111,8 +112,9 @@
             Controls.Add(labPartName);
             Controls.Add(cbPartName);
             Controls.Add(groupBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmPart";
-            Text = "frmPart";
+            Text = "Parts";
             Load += frmPart_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);

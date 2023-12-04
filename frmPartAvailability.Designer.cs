@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPartAvailability));
             gbItemInfo = new GroupBox();
             labPartName = new Label();
             cbPartName = new ComboBox();
@@ -135,12 +136,12 @@
             lbPartName.TabIndex = 0;
             lbPartName.Text = "Name:";
             // 
-            // lCompDetails
+            // lPartStock
             // 
             lPartStock.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
             lPartStock.FullRowSelect = true;
             lPartStock.Location = new Point(6, 22);
-            lPartStock.Name = "lCompDetails";
+            lPartStock.Name = "lPartStock";
             lPartStock.Size = new Size(451, 336);
             lPartStock.TabIndex = 0;
             lPartStock.UseCompatibleStateImageBehavior = false;
@@ -169,8 +170,9 @@
             ClientSize = new Size(800, 450);
             Controls.Add(gbQuantities);
             Controls.Add(gbItemInfo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmPartAvailability";
-            Text = "frmPartAvailability";
+            Text = "Part Details";
             Load += frmPartAvailability_Load;
             gbItemInfo.ResumeLayout(false);
             gbItemInfo.PerformLayout();
