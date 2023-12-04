@@ -62,6 +62,7 @@
             cbPartName.Name = "cbPartName";
             cbPartName.Size = new Size(695, 23);
             cbPartName.TabIndex = 2;
+            cbPartName.SelectedIndexChanged += cbPartName_SelectedIndexChanged;
             // 
             // gbQuantities
             // 
@@ -71,6 +72,7 @@
             gbQuantities.TabIndex = 2;
             gbQuantities.TabStop = false;
             gbQuantities.Text = "Part Stock";
+            gbQuantities.Enter += gbQuantities_Enter;
             // 
             // frmPartAvailability
             // 

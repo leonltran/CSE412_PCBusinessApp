@@ -16,5 +16,15 @@ namespace CSE412_PCBusinessApp
         {
             InitializeComponent();
         }
+
+        private void gbQuantities_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPartName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

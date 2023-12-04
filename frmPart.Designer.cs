@@ -30,6 +30,11 @@
         {
             groupBox1 = new GroupBox();
             lParts = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            columnHeader5 = new ColumnHeader();
             labPartName = new Label();
             cbPartName = new ComboBox();
             groupBox1.SuspendLayout();
@@ -47,11 +52,37 @@
             // 
             // lParts
             // 
+            lParts.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
             lParts.Location = new Point(6, 22);
             lParts.Name = "lParts";
             lParts.Size = new Size(764, 375);
             lParts.TabIndex = 2;
             lParts.UseCompatibleStateImageBehavior = false;
+            lParts.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Part ID";
+            columnHeader1.Width = 250;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Name";
+            columnHeader2.Width = 250;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Type";
+            columnHeader3.Width = 70;
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Manufacturer";
+            columnHeader4.Width = 100;
+            // 
+            // columnHeader5
+            // 
+            columnHeader5.Text = "Price";
             // 
             // labPartName
             // 
@@ -65,11 +96,12 @@
             // cbPartName
             // 
             cbPartName.FormattingEnabled = true;
-            cbPartName.Items.AddRange(new object[] { "CPU", "GPU", "HDD", "RAM", "SSD", "USB" });
+            cbPartName.Items.AddRange(new object[] { "All Parts", "CPU", "GPU", "HDD", "RAM", "SSD", "USB" });
             cbPartName.Location = new Point(81, 6);
             cbPartName.Name = "cbPartName";
             cbPartName.Size = new Size(695, 23);
             cbPartName.TabIndex = 4;
+            cbPartName.SelectedIndexChanged += cbPartName_SelectedIndexChanged;
             // 
             // frmPart
             // 
@@ -81,6 +113,7 @@
             Controls.Add(groupBox1);
             Name = "frmPart";
             Text = "frmPart";
+            Load += frmPart_Load;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -92,5 +125,10 @@
         private ListView lParts;
         private Label labPartName;
         private ComboBox cbPartName;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader5;
     }
 }
