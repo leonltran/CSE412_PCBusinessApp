@@ -25,7 +25,6 @@ This project entails the development of a Windows application and a PostgreSQL d
 
 ## User Manual / Phase 3 Report
 - [User Manual](https://docs.google.com/document/d/1V3LkDYAW8S25_7CXanJEaDjF3wUUEY3c-rlaNIcBETc/edit?usp=sharing)
-- [Demonstration Video](https://youtu.be/eyevTiNYc5o)
 
 ## SQL Dump
 These both are identical files but are being added as a caution for if one of them is not accessible.
