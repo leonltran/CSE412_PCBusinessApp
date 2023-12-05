@@ -31,3 +31,6 @@ This project entails the development of a Windows application and a PostgreSQL d
 These both are identical files but are being added as a caution for if one of them is not accessible.
 - [SQL Dump on Github](https://github.com/leonltran/CSE412_PCBusinessApp/tree/main/SQL%20Dump)
 - [SQL Dump on Google Drive](https://drive.google.com/drive/folders/1Id3UPnOc9_12-02iqsPHehMQynnPkVpi?usp=sharing)
+
+## Demonstration Video
+- [Demonstration Video](https://www.youtube.com/watch?v=eyevTiNYc5o)
