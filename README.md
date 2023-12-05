@@ -22,3 +22,6 @@ This project entails the development of a Windows application and a PostgreSQL d
 ## Documentation
 - [Project Proposal](https://docs.google.com/document/d/1l8wrKWwqJqVfAqrUKCL4EuCQ35Ylrj1vcoXfyGUewtw/edit)
 - [Project Phase 2](https://docs.google.com/document/d/12J8TuxrYpvXsVWXexZ6slrpkod9odAMZw5sVmzJfnRU/edit#heading=h.g0ogl328zari)
+
+## User Manual/ Phase 3 Report
+- [User Manual](https://docs.google.com/document/d/1V3LkDYAW8S25_7CXanJEaDjF3wUUEY3c-rlaNIcBETc/edit?usp=sharing)
