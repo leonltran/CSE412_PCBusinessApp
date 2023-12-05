@@ -39,7 +39,7 @@ namespace CSE412_PCBusinessApp
 
         private void btnOrderNewComputer_Click(object sender, EventArgs e)
         {
-            frmAddComputer ac = new frmAddComputer();
+            frmAddComputer ac = new frmAddComputer(oid, this);
             ac.Show();
         }
         private void btnNewComputer_Click(object sender, EventArgs e)
@@ -82,6 +82,8 @@ namespace CSE412_PCBusinessApp
         {
             if (oid != "")
             {
+                lsvComputers.Items.Clear();
+
                 string pass = Settings.Default.password;
                 string connectionString = $"Host=localhost;Username=postgres;Password={pass};Database=postgres";
                 var dataSource = NpgsqlDataSource.Create(connectionString);
@@ -127,7 +129,5 @@ namespace CSE412_PCBusinessApp
                 }
             }
         }
-
-        
     }
 }

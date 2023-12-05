@@ -42,12 +42,16 @@
             lblRAM = new Label();
             lblHDD = new Label();
             lblCPU = new Label();
+            lblType = new Label();
+            cbType = new ComboBox();
+            lblWeight = new Label();
+            txtWeight = new TextBox();
             SuspendLayout();
             // 
             // cbUSB
             // 
             cbUSB.FormattingEnabled = true;
-            cbUSB.Location = new Point(12, 255);
+            cbUSB.Location = new Point(12, 247);
             cbUSB.Name = "cbUSB";
             cbUSB.Size = new Size(376, 23);
             cbUSB.TabIndex = 28;
@@ -87,7 +91,7 @@
             // lblUSB
             // 
             lblUSB.AutoSize = true;
-            lblUSB.Location = new Point(12, 237);
+            lblUSB.Location = new Point(12, 229);
             lblUSB.Name = "lblUSB";
             lblUSB.Size = new Size(28, 15);
             lblUSB.TabIndex = 23;
@@ -109,6 +113,7 @@
             btnAdd.TabIndex = 19;
             btnAdd.Text = "Add New Computer";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // lblSSD
             // 
@@ -155,11 +160,50 @@
             lblCPU.TabIndex = 16;
             lblCPU.Text = "CPU";
             // 
+            // lblType
+            // 
+            lblType.AutoSize = true;
+            lblType.Location = new Point(13, 299);
+            lblType.Name = "lblType";
+            lblType.Size = new Size(31, 15);
+            lblType.TabIndex = 29;
+            lblType.Text = "Type";
+            // 
+            // cbType
+            // 
+            cbType.FormattingEnabled = true;
+            cbType.Items.AddRange(new object[] { "ATX", "Micro ATX", "Mini ITX" });
+            cbType.Location = new Point(64, 296);
+            cbType.Name = "cbType";
+            cbType.Size = new Size(138, 23);
+            cbType.TabIndex = 30;
+            // 
+            // lblWeight
+            // 
+            lblWeight.AutoSize = true;
+            lblWeight.Location = new Point(13, 328);
+            lblWeight.Name = "lblWeight";
+            lblWeight.Size = new Size(45, 15);
+            lblWeight.TabIndex = 31;
+            lblWeight.Text = "Weight";
+            // 
+            // txtWeight
+            // 
+            txtWeight.Location = new Point(64, 325);
+            txtWeight.Name = "txtWeight";
+            txtWeight.Size = new Size(138, 23);
+            txtWeight.TabIndex = 32;
+            txtWeight.TextAlign = HorizontalAlignment.Right;
+            // 
             // frmAddComputer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(400, 358);
+            Controls.Add(txtWeight);
+            Controls.Add(lblWeight);
+            Controls.Add(cbType);
+            Controls.Add(lblType);
             Controls.Add(cbUSB);
             Controls.Add(cbSSD);
             Controls.Add(cbRAM);
@@ -176,6 +220,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAddComputer";
             Text = "Add New Computer";
+            Load += frmAddComputer_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -195,5 +240,9 @@
         private Label lblRAM;
         private Label lblHDD;
         private Label lblCPU;
+        private Label lblType;
+        private ComboBox cbType;
+        private Label lblWeight;
+        private TextBox txtWeight;
     }
 }
