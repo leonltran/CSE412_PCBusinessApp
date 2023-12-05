@@ -45,7 +45,7 @@ namespace CSE412_PCBusinessApp
 
         private void btnNewOrder_Click_1(object sender, EventArgs e)
         {
-            frmAddOrder ao = new frmAddOrder();
+            frmAddOrder ao = new frmAddOrder(this);
             ao.Show();
         }
 

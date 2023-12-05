@@ -35,6 +35,10 @@
             lblDate = new Label();
             lblCustomer = new Label();
             gbComputer = new GroupBox();
+            txtWeight = new TextBox();
+            cbComputerType = new ComboBox();
+            lblWeight = new Label();
+            lblCompType = new Label();
             cbUSB = new ComboBox();
             cbSSD = new ComboBox();
             cbRAM = new ComboBox();
@@ -51,12 +55,14 @@
             dtpDate = new DateTimePicker();
             cbType = new ComboBox();
             txtPrice = new TextBox();
+            lblComment = new Label();
+            txtComment = new TextBox();
             gbComputer.SuspendLayout();
             SuspendLayout();
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(235, 396);
+            btnAdd.Location = new Point(537, 396);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(153, 42);
             btnAdd.TabIndex = 17;
@@ -76,7 +82,7 @@
             // lblType
             // 
             lblType.AutoSize = true;
-            lblType.Location = new Point(12, 141);
+            lblType.Location = new Point(224, 97);
             lblType.Name = "lblType";
             lblType.Size = new Size(31, 15);
             lblType.TabIndex = 16;
@@ -102,6 +108,10 @@
             // 
             // gbComputer
             // 
+            gbComputer.Controls.Add(txtWeight);
+            gbComputer.Controls.Add(cbComputerType);
+            gbComputer.Controls.Add(lblWeight);
+            gbComputer.Controls.Add(lblCompType);
             gbComputer.Controls.Add(cbUSB);
             gbComputer.Controls.Add(cbSSD);
             gbComputer.Controls.Add(cbRAM);
@@ -114,12 +124,46 @@
             gbComputer.Controls.Add(lblRAM);
             gbComputer.Controls.Add(lblHDD);
             gbComputer.Controls.Add(lblCPU);
-            gbComputer.Location = new Point(12, 188);
+            gbComputer.Location = new Point(12, 144);
             gbComputer.Name = "gbComputer";
-            gbComputer.Size = new Size(376, 202);
+            gbComputer.Size = new Size(376, 294);
             gbComputer.TabIndex = 20;
             gbComputer.TabStop = false;
             gbComputer.Text = "Computer";
+            // 
+            // txtWeight
+            // 
+            txtWeight.Location = new Point(196, 225);
+            txtWeight.Name = "txtWeight";
+            txtWeight.Size = new Size(174, 23);
+            txtWeight.TabIndex = 44;
+            // 
+            // cbComputerType
+            // 
+            cbComputerType.FormattingEnabled = true;
+            cbComputerType.Items.AddRange(new object[] { "ATX", "Micro ATX", "Mini ITX" });
+            cbComputerType.Location = new Point(196, 196);
+            cbComputerType.Name = "cbComputerType";
+            cbComputerType.Size = new Size(174, 23);
+            cbComputerType.TabIndex = 43;
+            // 
+            // lblWeight
+            // 
+            lblWeight.AutoSize = true;
+            lblWeight.Location = new Point(145, 233);
+            lblWeight.Name = "lblWeight";
+            lblWeight.Size = new Size(45, 15);
+            lblWeight.TabIndex = 42;
+            lblWeight.Text = "Weight";
+            // 
+            // lblCompType
+            // 
+            lblCompType.AutoSize = true;
+            lblCompType.Location = new Point(102, 204);
+            lblCompType.Name = "lblCompType";
+            lblCompType.Size = new Size(88, 15);
+            lblCompType.TabIndex = 41;
+            lblCompType.Text = "Computer Type";
             // 
             // cbUSB
             // 
@@ -233,18 +277,19 @@
             // 
             // dtpDate
             // 
+            dtpDate.Format = DateTimePickerFormat.Short;
             dtpDate.Location = new Point(12, 115);
             dtpDate.Name = "dtpDate";
-            dtpDate.Size = new Size(376, 23);
+            dtpDate.Size = new Size(206, 23);
             dtpDate.TabIndex = 22;
             // 
             // cbType
             // 
             cbType.FormattingEnabled = true;
             cbType.Items.AddRange(new object[] { "Standard", "Express" });
-            cbType.Location = new Point(12, 159);
+            cbType.Location = new Point(224, 115);
             cbType.Name = "cbType";
-            cbType.Size = new Size(376, 23);
+            cbType.Size = new Size(164, 23);
             cbType.TabIndex = 23;
             // 
             // txtPrice
@@ -254,11 +299,30 @@
             txtPrice.Size = new Size(376, 23);
             txtPrice.TabIndex = 24;
             // 
+            // lblComment
+            // 
+            lblComment.AutoSize = true;
+            lblComment.Location = new Point(394, 9);
+            lblComment.Name = "lblComment";
+            lblComment.Size = new Size(61, 15);
+            lblComment.TabIndex = 26;
+            lblComment.Text = "Comment";
+            // 
+            // txtComment
+            // 
+            txtComment.Location = new Point(394, 27);
+            txtComment.Multiline = true;
+            txtComment.Name = "txtComment";
+            txtComment.Size = new Size(296, 363);
+            txtComment.TabIndex = 27;
+            // 
             // frmAddOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(402, 450);
+            ClientSize = new Size(702, 450);
+            Controls.Add(txtComment);
+            Controls.Add(lblComment);
             Controls.Add(txtPrice);
             Controls.Add(cbType);
             Controls.Add(dtpDate);
@@ -272,6 +336,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAddOrder";
             Text = "Add New Order";
+            Load += frmAddOrder_Load;
             gbComputer.ResumeLayout(false);
             gbComputer.PerformLayout();
             ResumeLayout(false);
@@ -281,7 +346,7 @@
         #endregion
 
         private Button btnAdd;
-        private TextBox txtComment;
+        private Label lblComment;
         private Label lblComputer;
         private TextBox txtEmail;
         private Label lblPrice;
@@ -307,5 +372,10 @@
         private Label lblHDD;
         private Label lblCPU;
         private TextBox txtPrice;
+        private TextBox txtWeight;
+        private ComboBox cbComputerType;
+        private Label lblWeight;
+        private Label lblCompType;
+        private TextBox txtComment;
     }
 }

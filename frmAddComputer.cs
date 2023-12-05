@@ -38,6 +38,7 @@ namespace CSE412_PCBusinessApp
         }
         private void frmAddComputer_Load(object sender, EventArgs e)
         {
+            // POPULATE COMBO BOXES
             string pass = Settings.Default.password;
             string connectionString = $"Host=localhost;Username=postgres;Password={pass};Database=postgres";
             var dataSource = NpgsqlDataSource.Create(connectionString);
@@ -89,6 +90,7 @@ namespace CSE412_PCBusinessApp
             {
                 double weight = 0;
 
+                // ARGUMENT CHECKING
                 foreach (Control c in this.Controls)
                 {
                     if (c is ComboBox)
