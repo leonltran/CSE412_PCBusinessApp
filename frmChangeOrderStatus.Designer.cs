@@ -36,7 +36,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Recieved", "In Progress", "Testing", "Shipping", "Delivered" });
+            comboBox1.Items.AddRange(new object[] { "Recieved", "In Progress", "Testing", "Shipping", "Delivered", "Fulfilled", "Cancelled" });
             comboBox1.Location = new Point(87, 12);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(158, 23);

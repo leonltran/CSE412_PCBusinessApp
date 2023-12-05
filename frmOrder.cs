@@ -17,6 +17,7 @@ namespace CSE412_PCBusinessApp
     {
         private string oid = "";
         private string cName = "";
+        public string changeOrderOid = "";
         public frmOrder()
         {
             InitializeComponent();
@@ -33,12 +34,12 @@ namespace CSE412_PCBusinessApp
 
         private void btnChangeStatus_Click(object sender, EventArgs e)
         {
-            frmChangeOrderStatus cos = new frmChangeOrderStatus();
+            frmChangeOrderStatus cos = new frmChangeOrderStatus(oid);
             cos.Show();
         }
 
         private void btnOrderNewComputer_Click(object sender, EventArgs e)
-        {
+        {   
             frmAddComputer ac = new frmAddComputer(oid, this);
             ac.Show();
         }
