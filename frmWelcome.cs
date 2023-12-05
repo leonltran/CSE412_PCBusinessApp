@@ -56,7 +56,7 @@ namespace CSE412_PCBusinessApp
                 string orderID = lsvOrders.SelectedItems[0].Text; // get the order ID
 
                 // open frmOrder
-                frmOrder o = new frmOrder(orderID);
+                frmOrder o = new frmOrder(orderID, this);
                 o.Show();
             }
             catch

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChangeOrderStatus));
             comboBox1 = new ComboBox();
             label1 = new Label();
             button1 = new Button();
@@ -37,7 +38,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Recieved", "In Progress", "Testing", "Shipping", "Delivered", "Fulfilled", "Cancelled" });
-            comboBox1.Location = new Point(87, 12);
+            comboBox1.Location = new Point(87, 7);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(158, 23);
             comboBox1.TabIndex = 0;
@@ -45,7 +46,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 15);
+            label1.Location = new Point(12, 10);
             label1.Name = "label1";
             label1.Size = new Size(69, 15);
             label1.TabIndex = 1;
@@ -53,9 +54,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(6, 54);
+            button1.Location = new Point(12, 54);
             button1.Name = "button1";
-            button1.Size = new Size(239, 34);
+            button1.Size = new Size(233, 34);
             button1.TabIndex = 2;
             button1.Text = "Update";
             button1.UseVisualStyleBackColor = true;
@@ -69,8 +70,9 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(comboBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmChangeOrderStatus";
-            Text = "frmChangeOrderStatus";
+            Text = "Order Status";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -15,12 +15,20 @@ namespace CSE412_PCBusinessApp
 {
     public partial class frmChangeOrderStatus : Form
     {
-        string oid = "";
+        
+        private string oid = "";
+        private frmOrder parentForm = null;
         public frmChangeOrderStatus(string oid)
         {
             InitializeComponent();
             this.oid = oid;
-    }
+        }
+        public frmChangeOrderStatus(string oid, Form callingForm)
+        {
+            InitializeComponent();
+            this.oid = oid;
+            this.parentForm = callingForm as frmOrder;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,6 +38,8 @@ namespace CSE412_PCBusinessApp
             {
                 // Update the order status in the database
                 UpdateOrderStatus(selectedStatus);
+                parentForm.updateComputerList();
+                parentForm.updateParentForm();
                 this.Close();
             }
             else
