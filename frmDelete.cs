@@ -35,19 +35,26 @@ namespace CSE412_PCBusinessApp
                 {
                     connection.Open();
 
-                    using (NpgsqlCommand command = new NpgsqlCommand($"DELETE FROM comppart WHERE cp_comp_id = {computerID}", connection))
+                    // Step 1: Delete records from comppart table
+                    using (NpgsqlCommand commandComppart = new NpgsqlCommand($"DELETE FROM comppart WHERE cp_comp_id = {computerID}", connection))
                     {
-                        int rowsAffected = command.ExecuteNonQuery();
+                        int rowsAffectedComppart = commandComppart.ExecuteNonQuery();
 
-                        if (rowsAffected > 0)
+                        // Step 2: Delete the computer record
+                        using (NpgsqlCommand commandComputer = new NpgsqlCommand($"DELETE FROM computer WHERE c_comp_id = {computerID}", connection))
                         {
-                            // Deletion successful
-                            MessageBox.Show("Item has been deleted successfully.", "Deletion Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            // No rows were affected, deletion not successful
-                            MessageBox.Show("Deletion failed. Item not found or an error occurred.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            int rowsAffectedComputer = commandComputer.ExecuteNonQuery();
+
+                            if (rowsAffectedComppart > 0 || rowsAffectedComputer > 0)
+                            {
+                                // Deletion successful
+                                MessageBox.Show("Item has been deleted successfully.", "Deletion Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                // No rows were affected, deletion not successful
+                                MessageBox.Show("Deletion failed. Item not found or an error occurred.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -56,6 +63,7 @@ namespace CSE412_PCBusinessApp
             // close window when finished
             this.Close();
         }
+
 
         private void labelItemType_Click(object sender, EventArgs e)
         {
