@@ -25,3 +25,8 @@ This project entails the development of a Windows application and a PostgreSQL d
 
 ## User Manual/ Phase 3 Report
 - [User Manual](https://docs.google.com/document/d/1V3LkDYAW8S25_7CXanJEaDjF3wUUEY3c-rlaNIcBETc/edit?usp=sharing)
+
+## SQL Dump
+These both are identical files but are being added as a caution for if one of them is not accessible.
+- [SQL Dump on Github](https://github.com/leonltran/CSE412_PCBusinessApp/tree/main/SQL%20Dump)
+- [SQL Dump on Google Drive](https://drive.google.com/drive/folders/1Id3UPnOc9_12-02iqsPHehMQynnPkVpi?usp=sharing)
