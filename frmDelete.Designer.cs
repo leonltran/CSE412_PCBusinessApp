@@ -45,9 +45,11 @@
             gbItemInfo.Controls.Add(cbItemUID);
             gbItemInfo.Controls.Add(labelItemType);
             gbItemInfo.Controls.Add(cbDelType);
-            gbItemInfo.Location = new Point(12, 12);
+            gbItemInfo.Location = new Point(22, 26);
+            gbItemInfo.Margin = new Padding(6);
             gbItemInfo.Name = "gbItemInfo";
-            gbItemInfo.Size = new Size(231, 377);
+            gbItemInfo.Padding = new Padding(6);
+            gbItemInfo.Size = new Size(429, 804);
             gbItemInfo.TabIndex = 0;
             gbItemInfo.TabStop = false;
             gbItemInfo.Text = "Item Information";
@@ -55,52 +57,60 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 80);
+            label1.Location = new Point(11, 171);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(58, 15);
+            label1.Size = new Size(118, 32);
             label1.TabIndex = 3;
-            label1.Text = "Unique Id";
+            label1.Text = "Computer Id";
             // 
             // cbItemUID
             // 
             cbItemUID.FormattingEnabled = true;
-            cbItemUID.Location = new Point(6, 98);
+            cbItemUID.Location = new Point(11, 209);
+            cbItemUID.Margin = new Padding(6);
             cbItemUID.Name = "cbItemUID";
-            cbItemUID.Size = new Size(121, 23);
+            cbItemUID.Size = new Size(221, 40);
             cbItemUID.TabIndex = 2;
             // 
             // labelItemType
             // 
             labelItemType.AutoSize = true;
-            labelItemType.Location = new Point(6, 21);
+            labelItemType.Location = new Point(11, 45);
+            labelItemType.Margin = new Padding(6, 0, 6, 0);
             labelItemType.Name = "labelItemType";
-            labelItemType.Size = new Size(58, 15);
+            labelItemType.Size = new Size(120, 32);
             labelItemType.TabIndex = 1;
             labelItemType.Text = "Item Type";
+            labelItemType.Click += labelItemType_Click;
             // 
             // cbDelType
             // 
             cbDelType.FormattingEnabled = true;
-            cbDelType.Items.AddRange(new object[] { "Customer", "Order", "Computer", "Part" });
-            cbDelType.Location = new Point(6, 39);
+            cbDelType.Items.AddRange(new object[] { "Computer" });
+            cbDelType.Location = new Point(11, 83);
+            cbDelType.Margin = new Padding(6);
             cbDelType.Name = "cbDelType";
-            cbDelType.Size = new Size(121, 23);
+            cbDelType.Size = new Size(221, 40);
             cbDelType.TabIndex = 0;
             // 
             // gbResult
             // 
-            gbResult.Location = new Point(249, 12);
+            gbResult.Location = new Point(462, 26);
+            gbResult.Margin = new Padding(6);
             gbResult.Name = "gbResult";
-            gbResult.Size = new Size(539, 426);
+            gbResult.Padding = new Padding(6);
+            gbResult.Size = new Size(1001, 909);
             gbResult.TabIndex = 1;
             gbResult.TabStop = false;
             gbResult.Text = "Search Result";
             // 
             // btnDeleteItem
             // 
-            btnDeleteItem.Location = new Point(12, 395);
+            btnDeleteItem.Location = new Point(22, 843);
+            btnDeleteItem.Margin = new Padding(6);
             btnDeleteItem.Name = "btnDeleteItem";
-            btnDeleteItem.Size = new Size(231, 43);
+            btnDeleteItem.Size = new Size(429, 92);
             btnDeleteItem.TabIndex = 2;
             btnDeleteItem.Text = "Delete Selected Item";
             btnDeleteItem.UseVisualStyleBackColor = true;
@@ -108,13 +118,14 @@
             // 
             // frmDelete
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1486, 960);
             Controls.Add(btnDeleteItem);
             Controls.Add(gbResult);
             Controls.Add(gbItemInfo);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(6);
             Name = "frmDelete";
             Text = "Delete Item";
             gbItemInfo.ResumeLayout(false);
